@@ -30,21 +30,25 @@ class StromleserScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-                height: size.height * 0.036,
-                width: size.width * 0.18,
-                decoration: const BoxDecoration(
-                  color: Color(0xFF2C2C2E),
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(15),
-                    bottomRight: Radius.circular(15),
+            GestureDetector(
+              onTap: () {
+              },
+              child: Container(
+                  height: size.height * 0.036,
+                  width: size.width * 0.18,
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF2C2C2E),
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(15),
+                      bottomRight: Radius.circular(15),
+                    ),
                   ),
-                ),
-                child: Icon(
-                  Icons.arrow_back_ios_rounded,
-                  color: Colors.grey[500],
-                  size: 17,
-                )),
+                  child: Icon(
+                    Icons.arrow_back_ios_rounded,
+                    color: Colors.grey[500],
+                    size: 17,
+                  )),
+            ),
           ],
         ),
         title: Text(
@@ -52,16 +56,20 @@ class StromleserScreen extends StatelessWidget {
           style: TextStyle(color: Colors.grey[500], fontSize: 17),
         ),
         actions: [
-          Container(
-            height: size.height * 0.036,
-            width: size.height * 0.036,
-            decoration: BoxDecoration(
-                color: const Color(0xFF2C2C2E),
-                borderRadius: BorderRadius.circular(15)),
-            child: Icon(
-              Icons.settings,
-              color: Colors.grey[500],
-              size: 17,
+          GestureDetector(
+            onTap: () {
+            },
+            child: Container(
+              height: size.height * 0.036,
+              width: size.height * 0.036,
+              decoration: BoxDecoration(
+                  color: const Color(0xFF2C2C2E),
+                  borderRadius: BorderRadius.circular(15)),
+              child: Icon(
+                Icons.settings,
+                color: Colors.grey[500],
+                size: 17,
+              ),
             ),
           ),
           SizedBox(
